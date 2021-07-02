@@ -2,12 +2,6 @@
 		<div class="header-top">
 			<div class="container">
 				<div class="pull-left auto-width-left">
-					<ul class="top-menu menu-beta l-inline">
-						<li><a href="lien-he"><i class="fa fa-home"></i>Nguyễn Chí Thanh, Quận 5, Hồ Chí Minh City</a></li>
-						<li><a href=""><i class="fa fa-phone"></i> 0938090374</a></li>
-					</ul>
-				</div>
-				<div class="pull-right auto-width-right">
 					<ul class="top-details menu-beta l-inline">
 					@if(Auth::check())
 						<li><a href="">Chào bạn {{Auth::user()->full_name}}</a></li>
@@ -19,20 +13,12 @@
 
 					</ul>
 				</div>
-				<div class="clearfix"></div>
-			</div> <!-- .container -->
-		</div> <!-- .header-top -->
-		<div class="header-body">
-			<div class="container beta-relative">
-				<div class="pull-right beta-components space-left ov">
+				<div class="pull-right auto-width-right">
 					<div class="space10">&nbsp;</div>
-
 					<div class="beta-comp">
-					
 						<div class="cart">
 							<div class="beta-select"><i class="fa fa-shopping-cart"></i> Giỏ hàng (@if(Session::has('cart')){{Session('cart')->totalQty}}@else Trống @endif sản phẩm ) <i class="fa fa-chevron-down"></i></div>
 							<div class="beta-dropdown cart-body">
-							
 							@if(Session::has('cart'))
 							@foreach($product_cart as $product)
 								<div class="cart-item">
@@ -49,13 +35,11 @@
 								<div class="cart-caption">
 									<div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">@if(Session::has('cart')){{number_format($totalPrice)}} @else 0 @endif đồng</span></div>
 									<div class="clearfix"></div>
-
 									<div class="center">
 										<div class="space10">&nbsp;</div>
 										<a href="{{route('dathang')}}" class="beta-btn primary text-center">Đặt hàng <i class="fa fa-chevron-right"></i></a>
 									</div>
 								</div>
-
 							@endif
 							</div>
 						</div> <!-- .cart -->
@@ -63,7 +47,8 @@
 				</div>
 				<div class="clearfix"></div>
 			</div> <!-- .container -->
-		</div> <!-- .header-body -->
+		</div> <!-- .header-top -->
+
 		<div class="header-bottom" style="background-color: #0277b8;">
 			<div class="container">
 				<a class="visible-xs beta-menu-toggle pull-right" href="#"><span class='beta-menu-toggle-text'>Menu</span> <i class="fa fa-bars"></i></a>

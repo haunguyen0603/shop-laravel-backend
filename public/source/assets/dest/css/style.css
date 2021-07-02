@@ -1571,7 +1571,7 @@ padding-right:0
 
 .cart-body {
 position:absolute;
-right:15px;
+right: 190px;
 z-index:100;
 background:#fff;
 border:1px solid #e1e1e1;
@@ -4238,7 +4238,7 @@ line-height:40px
 
 .contact-info {
 position:relative;
-padding-left:35px
+padding-left:0px
 }
 
 .contact-info i {

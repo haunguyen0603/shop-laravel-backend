@@ -32,7 +32,7 @@
 						<h4 class="widget-title">Liên Lạc</h4>
 						<div>
 							<div class="contact-info">
-								
+								<a href="lien-he"></i>Nguyễn Chí Thanh, Quận 5, Hồ Chí Minh City</a>	
 							</div>
 						</div>
 					</div>

@@ -45,7 +45,7 @@
 
 
 							<div class="single-item-options">
-								<p>Thêm vào giỏ hàng:<a class="add-to-cart" href="{{route('themgiohang',$sanpham->id)}}"><i class="fa fa-shopping-cart"></i></a></p>
+								<p>Thêm vào giỏ hàng:<a class="add-to-cart" href="{{route('themgiohang',$sanpham->id)}}"><i class="fas fa-cart-plus"></i></a></p>
 								<div class="clearfix"></div>
 							</div>
 						</div>
@@ -86,7 +86,7 @@
 										</p>
 									</div>
 									<div class="single-item-caption">
-										<a class="add-to-cart pull-left" href="{{route('themgiohang',$sptt->id)}}"><i class="fa fa-shopping-cart"></i></a>
+										<a class="add-to-cart pull-left" href="{{route('themgiohang',$sptt->id)}}"><i class="fas fa-cart-plus"></i></a>
 										<a class="beta-btn primary" href="{{route('chitietsanpham',$sptt->id)}}">Details <i class="fa fa-chevron-right"></i></a>
 										<div class="clearfix"></div>
 									</div>

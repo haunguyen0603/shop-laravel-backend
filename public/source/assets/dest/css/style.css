@@ -1083,7 +1083,7 @@ margin-left:25px
 border-top:1px solid #e3e3e3;
 border-bottom:1px solid #e3e3e3
 }
-.color-div{background:#353535!important;}
+.color-div{background:#c4c4c4!important;}
 #footer.color-div input{background: #3f3f3f;border:1px solid gray;}
 .color-div a{color:lightgray;}
 
@@ -1558,7 +1558,7 @@ position:static
 
 .cart .beta-select i:first-child {
 margin-right:3px;
-color:#999da0;
+color:#428bca;
 padding-left:0;
 padding-right:0;
 font-size:16px
@@ -4640,15 +4640,15 @@ float:left!important
 ============================================================================= */
 
 #footer {
-background:#172431;
-color:#7b8fa3;
+background:#000000;
+color:#000000;
 padding:40px 0 50px
 }
 
 #footer a {
-color:#7b8fa3
+color:#298aeb
 }
-#footer.color-div a {color:gray}
+#footer.color-div a {color:rgb(25, 125, 206)}
 #footer a:hover {
 color:#f90
 }
@@ -4658,7 +4658,7 @@ color:#f90
 color:#adbac8;
 margin-bottom:22px
 }
-#footer.color-div h4.widget-title{color:gray;}
+#footer.color-div h4.widget-title{color:rgb(0, 0, 0);}
 
 #footer ul {
 list-style:none

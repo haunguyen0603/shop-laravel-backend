@@ -17,7 +17,7 @@
 					<div class="space10">&nbsp;</div>
 					<div class="beta-comp">
 						<div class="cart">
-							<div class="beta-select"><i class="fa fa-shopping-cart"></i> Giỏ hàng (@if(Session::has('cart')){{Session('cart')->totalQty}}@else Trống @endif sản phẩm ) <i class="fa fa-chevron-down"></i></div>
+							<div class="beta-select"><i class="fas fa-cart-plus"></i> Giỏ hàng (@if(Session::has('cart')){{Session('cart')->totalQty}}@else Trống @endif sản phẩm ) <i class="fa fa-chevron-down"></i></div>
 							<div class="beta-dropdown cart-body">
 							@if(Session::has('cart'))
 							@foreach($product_cart as $product)

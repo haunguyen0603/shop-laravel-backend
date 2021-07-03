@@ -81,7 +81,7 @@
 			<div class="space50">&nbsp;</div>
 			<div class="row">
 				<div class="col-sm-8">
-					<h2><a href="" class="typewrite" data-period="2000" data-type='[ "Contact Form" ]'></a></h2>
+					<h2 style="color:#428bca">Gửi yêu cầu tới chúng tôi</h2>
 					<div class="space20">&nbsp;</div>
 					<form action="{{ route('lienhe') }}" method="post" class="contact-form">
 						<input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -103,16 +103,20 @@
 					</form>
 				</div>
 				<div class="col-sm-4" style="text-align: left;" >
-					<h2><a href="" class="typewrite" data-period="2000" data-type='[ "Contact Information" ]'></a></h2>
+					<h2 style="color:#428bca">Thông tin liên hệ</h2>
 					<div class="space20">&nbsp;</div>
-
-					<h6 class="contact-title"><b>Address</b></h6>
+					<h6 class="contact-title"><b>Địa chỉ</b></h6>
 					<br>
-					<p>137E Nguyễn Chí Thanh, Phường 9, Quận 5, TP. Hồ Chí Minh, Việt Nam</p>
+					<i class='far fa-building' style='font-size:24px;color:#428bca'></i> 137E Nguyễn Chí Thanh, Phường 9, Quận 5, TP. Hồ Chí Minh, Việt Nam
 					<div class="space20">&nbsp;</div>
-					<h6 class="contact-title"><b>About us</b></h6>
+					<h6 class="contact-title"><b>Số điện thoại</b></h6>
 					<br>
-					<b><a href="http://csc.edu.vn/">Trung Tâm Tin Học - ĐH Khoa Học Tự Nhiên (CS2)</a></b>
+					<i class="fas fa-phone" style='font-size:24px;color:#428bca'></i><b> 0392009814</b><br><br>
+					<i class="fas fa-phone" style='font-size:24px;color:#428bca'></i><b> 0938090374</b>
+					<div class="space20">&nbsp;</div>
+					<h6 class="contact-title"><b>Email</b></h6>
+					<br>
+					<i class="fas fa-envelope-open-text" style='font-size:24px;color:#428bca'></i><b> haunguyen0603@gmail.com</b>
 				</div>
 			</div>
 		</div> <!-- #content -->

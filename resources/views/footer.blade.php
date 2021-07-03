@@ -3,37 +3,27 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="widget">
-						<h4 class="widget-title">Website</h4>
+						<h4 class="widget-title"><b>Website</b></h4>
 						<div>
-							<p><a href="http://csc.edu.vn/">Trung Tâm Tin Học - ĐH Khoa Học Tự Nhiên (CS2) </a></p>
+							{{-- <p><a href="http://csc.edu.vn/">Trung Tâm Tin Học - ĐH Khoa Học Tự Nhiên (CS2) </a></p> --}}
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="widget">
-						<h4 class="widget-title">Thông tin người quản lí</h4>
-						<div>
-							<p>
-								<code><b>Nguyễn Thành Hậu</b></code>
-								<br>SDT: 0938090374
-							</p>
-							<br>
-							<!-- <p>
-								<code><b>Vũ Đình Thuận</b></code><br>
-								Mssv: 51603319 <br>
-								SDT 084 647 3479
-							</p> -->
-						</div>
+						<h4 class="widget-title"><b>Về chúng tôi</b></h4>
+						<a href="gioi-thieu">Giới thiệu</a>
+						
 					</div>
 				</div>
 				<div class="col-sm-4">
 				 <div class="col-sm-10">
 					<div class="widget">
-						<h4 class="widget-title">Liên Lạc</h4>
-						<div>
-							<div class="contact-info">
-								<a href="lien-he"></i>Nguyễn Chí Thanh, Quận 5, Hồ Chí Minh City</a>	
-							</div>
+						<h4 class="widget-title"><b>Liên Lạc</b></h4>
+						<div class="contact-info">
+							<p style="color:black">Số điện thoại: 0392009814</p>
+							<Address>Địa chỉ: 137E Nguyễn Chí Thanh, Phường 9, Quận 5, TP. Hồ Chí Minh, Việt Nam</Address>
+							<p style="color:black">Email: haunguyen0603@gmail.com</p>
 						</div>
 					</div>
 				  </div>

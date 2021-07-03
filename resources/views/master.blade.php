@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="source/assets/dest/css/animate.css">
 	<link rel="stylesheet" title="style" href="source/assets/dest/css/huong-style.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/fd328d9d86.js" crossorigin="anonymous"></script>
 	<meta name="csrf_token" content="{ csrf_token() }" />
 </head>
 <body>

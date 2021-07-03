@@ -1,7 +1,7 @@
 
 @extends('master')
 @section('content')
-<div class="inner-header">
+{{-- <div class="inner-header">
 		<div class="container">
 			<div class="pull-left">
 				<h6 class="inner-title">Đăng nhập</h6>
@@ -13,7 +13,7 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
-	</div>
+	</div> --}}
 	
 	<div class="container">
 		<div id="content">

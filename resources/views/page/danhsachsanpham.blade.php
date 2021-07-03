@@ -30,6 +30,7 @@
                             <table class="table table-condensed">
                                 <thead>
                                 <tr>
+                                    <td><strong>Hình ảnh</strong></td>
                                     <td><strong>Mã sản phẩm</strong></td>
                                     <td><strong>Tên sản phẩm</strong></td>
                                     <td><strong>Đơn giá</strong></td>
@@ -45,21 +46,22 @@
                                {{--field here--}}
                                @foreach($allProduct as $all)
                                <tr>
-                                   <td><strong>{{$all->id}}</strong></td>
-                                   <td><strong>{{$all->name}}</strong></td>
-                                   <td><strong>{{$all->unit_price}}</strong></td>
-                                   <td class=""><strong>{{$all->promotion_price}}</strong></td>
-                                   <td class=""><strong>{{$all->unit}}</strong></td>
-                                   <td class=""><strong>{{$all->new}}</strong></td>
-                                   <td class="table-trangthai">
+                                    <td class=""><img src="source/image/product/{{$all->image}}" alt="" height="100px"></td>
+                                    <td><strong>{{$all->id}}</strong></td>
+                                    <td><strong>{{$all->name}}</strong></td>
+                                    <td><strong>{{$all->unit_price}}</strong></td>
+                                    <td class=""><strong>{{$all->promotion_price}}</strong></td>
+                                    <td class=""><strong>{{$all->unit}}</strong></td>
+                                    <td class=""><strong>{{$all->new}}</strong></td>
+                                    <td class="table-trangthai">
                                         <?= $all->active == 1 ? '<span class="badge badge-success">Hiển thị</span>':'<span class="badge badge-dark">Ẩn</span>' ?>
                                     </td>
-                                   <td> <a href="{{route('page.suasanpham',$all->id)}}}"><button class="btn btn-primary btn-block"><strong>Edit</strong></button></a></td>
-                                   <form action="{{route('product.destroy',$all->id)}}" method="post" class="beta-form-checkout">
-                                       {{ csrf_field() }}
-                                       {{ method_field('DELETE') }}
-                                       <td><button type="submit" class="btn btn-danger btn-block" onclick="return confirm('Bạn muốn xóa không?')">Xóa</button></td>
-                                   </form>
+                                    <td> <a href="{{route('page.suasanpham',$all->id)}}}"><button class="btn btn-primary btn-block"><strong>Edit</strong></button></a></td>
+                                    <form action="{{route('product.destroy',$all->id)}}" method="post" class="beta-form-checkout">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <td><button type="submit" class="btn btn-danger btn-block" onclick="return confirm('Bạn muốn xóa không?')">Xóa</button></td>
+                                    </form>
                                </tr>
                                    @endforeach
                                 </tbody>

@@ -59,7 +59,7 @@
         document.body.appendChild(css);
     };
 </script>
-	<div class="inner-header">
+	{{-- <div class="inner-header">
 		<div class="container">
 			<div class="pull-left">
 				<h6 class="inner-title">Contacts</h6>
@@ -71,9 +71,9 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
-	</div>
+	</div> --}}
 	<div class="beta-map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6778650353567!2d106.66443081462239!3d10.759291092333143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ee1ff354f3f%3A0x18f40d9f2c7f8e18!2zVHJ1bmcgVMOibSBUaW4gSOG7jWMgLSDEkEggS2hvYSBI4buNYyBU4buxIE5oacOqbiAoQ1MyKQ!5e0!3m2!1svi!2s!4v1601199049106!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6778650353567!2d106.66443081462239!3d10.759291092333143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ee1ff354f3f%3A0x18f40d9f2c7f8e18!2zVHJ1bmcgVMOibSBUaW4gSOG7jWMgLSDEkEggS2hvYSBI4buNYyBU4buxIE5oacOqbiAoQ1MyKQ!5e0!3m2!1svi!2s!4v1601199049106!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 	</div>
 	<div class="container">
 		<div id="content" class="space-top-none">
@@ -83,43 +83,34 @@
 				<div class="col-sm-8">
 					<h2><a href="" class="typewrite" data-period="2000" data-type='[ "Contact Form" ]'></a></h2>
 					<div class="space20">&nbsp;</div>
-					<p>137E Nguyễn Chí Thanh, Phường 9, Quận 5, Thành phố Hồ Chí Minh, Việt Nam.<br>
-
-						Hotline: </p>
-					<div class="space20">&nbsp;</div>
-					<form action="#" method="post" class="contact-form">
+					<form action="{{ route('lienhe') }}" method="post" class="contact-form">
+						<input type="hidden" name="_token" value="{{csrf_token()}}">
 						<div class="form-block">
-							<input name="your-name" type="text" placeholder="Your Name (required)">
+							<input name="your_name" type="text" placeholder="Your Name (required)" required>
 						</div>
 						<div class="form-block">
-							<input name="your-email" type="email" placeholder="Your Email (required)">
+							<input name="your_email" type="email" placeholder="Your Email (required)" required>
 						</div>
 						<div class="form-block">
-							<input name="your-subject" type="text" placeholder="Subject">
+							<input name="your_subject" type="text" placeholder="Subject" required>
 						</div>
 						<div class="form-block">
-							<textarea name="your-message" placeholder="Your Message"></textarea>
+							<textarea name="your_note" placeholder="Your Message" required></textarea>
 						</div>
 						<div class="form-block">
 							<button type="submit" class="beta-btn primary">Send Message <i class="fa fa-chevron-right"></i></button>
 						</div>
 					</form>
 				</div>
-				<div class="col-sm-4" style="text-align: center;" >
+				<div class="col-sm-4" style="text-align: left;" >
 					<h2><a href="" class="typewrite" data-period="2000" data-type='[ "Contact Information" ]'></a></h2>
-					{{--<h2 >Contact Information</h2>--}}
 					<div class="space20">&nbsp;</div>
 
 					<h6 class="contact-title"><b>Address</b></h6>
-					<p>
-						137E Nguyễn Chí Thanh,<br>
-						Phường 9, Quận 5,<br>
-						TP. Hồ Chí Minh, Việt Nam
-					</p>
+					<br>
+					<p>137E Nguyễn Chí Thanh, Phường 9, Quận 5, TP. Hồ Chí Minh, Việt Nam</p>
 					<div class="space20">&nbsp;</div>
 					<h6 class="contact-title"><b>About us</b></h6>
-					
-					<br>
 					<br>
 					<b><a href="http://csc.edu.vn/">Trung Tâm Tin Học - ĐH Khoa Học Tự Nhiên (CS2)</a></b>
 				</div>

@@ -7,7 +7,7 @@
 	<base href="{{asset('')}}">
 	<link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	{{-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> --}}
 	<link rel="stylesheet" href="source/assets/dest/css/font-awesome.min.css">
 	<link rel="stylesheet" href="source/assets/dest/vendors/colorbox/example3/colorbox.css">
 	<link rel="stylesheet" href="source/assets/dest/rs-plugin/css/settings.css">
@@ -15,10 +15,14 @@
 	<link rel="stylesheet" title="style" href="source/assets/dest/css/style.css">
 	<link rel="stylesheet" href="source/assets/dest/css/animate.css">
 	<link rel="stylesheet" title="style" href="source/assets/dest/css/huong-style.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<meta name="csrf_token" content="{ csrf_token() }" />
 </head>
 <body>
-
+	@if (Session::has('thongbao'))
+		<script type='text/javascript'>alert('{{Session::get('thongbao')}}')</script>
+	@endif
+		
 		@include('header')
 	<div class="rev-slider">
 		@yield('content')

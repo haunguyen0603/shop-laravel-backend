@@ -798,10 +798,11 @@ strong {
 color:#000
 }
 
-input[type="text"],input[type="email"],input[type="url"],textarea {
+input[type="text"],input[type="email"],input[type="password"],input[type="url"],textarea {
 width:100%;
-border:1px solid #e1e1e1;
-height:37px;
+border-radius:5px;
+color:#000000;
+height:35px;
 padding:0 12px
 }
 
@@ -1571,7 +1572,7 @@ padding-right:0
 
 .cart-body {
 position:absolute;
-right: 190px;
+right: auto;
 z-index:100;
 background:#fff;
 border:1px solid #e1e1e1;
@@ -4482,7 +4483,21 @@ background:#fff!important
 color:#000!important
 }
 
+.invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
 
+.table > tbody > tr > .no-line {
+    border-top: none;
+}
+
+.table > thead > tr > .no-line {
+    border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
+}
 
 .history-navigation {
 display:block;

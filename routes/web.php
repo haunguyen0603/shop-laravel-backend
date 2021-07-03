@@ -39,6 +39,11 @@ Route::get('lien-he',[
 	'uses'=>'PageController@getLienHe'
 ]);
 
+Route::post('lien-he',[
+	'as'=>'lienhe',
+	'uses'=>'PageController@postLienHe'
+]);
+
 Route::get('gioi-thieu',[
 	'as'=>'gioithieu',
 	'uses'=>'PageController@getGioiThieu'

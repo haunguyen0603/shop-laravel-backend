@@ -19,7 +19,7 @@
 		
 		<form action="{{route('dathang')}}" method="post" class="beta-form-checkout">
 			<input type="hidden" name="_token" value="{{csrf_token()}}">
-			<code><h2><div class="row">@if(Session::has('thongbao')){{Session::get('thongbao')}}@endif</div></h2></code>
+			{{-- <code><h2><div class="row">@if(Session::has('thongbao')){{Session::get('thongbao')}}@endif</div></h2></code> --}}
 			<div class="row">
 				<div class="col-sm-6">
 					<h4>Thông tin của bạn</h4>

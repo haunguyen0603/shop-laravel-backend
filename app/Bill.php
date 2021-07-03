@@ -15,4 +15,11 @@ class Bill extends Model
     public function bill(){
     	return $this->belongsTo('App\Customer','id_customer','id');
     }
+
+    public function BillInfo($OrderID){
+        $model = $this  ->join('customer as a', 'a.id', '=', 'bills.id_customer')
+                        ->where('bills.id', $OrderID);
+
+        return $model;
+    }
 }

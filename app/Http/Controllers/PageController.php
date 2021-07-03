@@ -12,6 +12,7 @@ use App\Bill;
 use App\BillDetail;
 use App\User;
 use App\Http;
+use App\ContactForm;
 
 use Image;
 use Illuminate\Http\Request;
@@ -54,6 +55,7 @@ class PageController extends Controller
             return redirect()->back()->with(['flag' => 'danger', 'message' => 'Tài khoản chưa kích hoạt']);
         }
 
+        return view('page.dangnhap');
     }
 
     public function updateProduct(Request $request, $id)
@@ -188,6 +190,23 @@ class PageController extends Controller
         return view('page.lienhe');
     }
 
+    public function postLienHe(Request $req)
+    {
+        // var_dump(   $req->your_name,
+        //             $req->your_mail,
+        //             $req->your_subject,
+        //             $req->your_note);
+
+        $contact = new ContactForm;
+        $contact->contact_name = $req->your_name;
+        $contact->email = $req->your_email;
+        $contact->subject = $req->your_subject;
+        $contact->note = $req->your_note;
+        // $contact->save();
+
+        return redirect()->back()->with('thongbao', 'Gửi tin nhắn thành công!');
+    }
+
     public function getGioiThieu()
     {
         return view('page.gioithieu');
@@ -258,9 +277,14 @@ class PageController extends Controller
 
     public function billInfor($id)
     {
-        $bill = Bill::where('id', $id)->first();
-        $bill_detail = BillDetail::where('id', $id)->first();
-        return view('page.thongtindonhang', compact('bill', 'bill_detail'));
+        $bill = new Bill;
+        $Bill = $bill->BillInfo($id)->first();
+        // dd($Bill->payment);
+        // $bill_detail = BillDetail::where('id', $id)->first();
+        $bill_detail = new BillDetail;
+        $BillDetail = $bill_detail->BillDetail($id)->get();
+
+        return view('page.thongtindonhang', compact('BillDetail', 'Bill'));
     }
 
 

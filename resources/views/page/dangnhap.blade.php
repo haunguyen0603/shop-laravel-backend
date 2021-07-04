@@ -22,13 +22,12 @@
 			<input type="hidden" name="_token" value="{{csrf_token()}}">
 				<div class="row">
 					<div class="col-sm-3"></div>
-					@if(Session::has('flag'))
-						<div class="alert alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>
-					@endif
 					<div class="col-sm-6">
-						<h4>Đăng nhập</h4>
+						@if(Session::has('flag'))
+							<div class="alert alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>
+						@endif
+						<h2>Đăng nhập</h2>
 						<div class="space20">&nbsp;</div>
-
 
 						<div class="form-block">
 							<label for="email">Email address*</label>

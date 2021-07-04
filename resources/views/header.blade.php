@@ -1,5 +1,5 @@
 <div id="header">
-		<div class="header-top">
+		<div class="top-header">
 			<div class="container">
 				<div class="pull-left auto-width-left">
 					<ul class="top-details menu-beta l-inline">
@@ -17,7 +17,7 @@
 					<div class="space10">&nbsp;</div>
 					<div class="beta-comp">
 						<div class="cart">
-							<div class="beta-select"><i class="fas fa-cart-plus"></i> Giỏ hàng (@if(Session::has('cart')){{Session('cart')->totalQty}}@else Trống @endif sản phẩm ) <i class="fa fa-chevron-down"></i></div>
+							<div class="beta-select"><i class="fas fa-cart-plus"></i> Giỏ hàng @if(Session::has('cart')) ({{Session('cart')->totalQty}} sản phẩm) @endif <i class="fa fa-chevron-down"></i></div>
 							<div class="beta-dropdown cart-body">
 							@if(Session::has('cart'))
 							@foreach($product_cart as $product)
@@ -51,7 +51,7 @@
 
 		<div class="header-bottom" style="background-color: #0277b8;">
 			<div class="container">
-				<a class="visible-xs beta-menu-toggle pull-right" href="#"><span class='beta-menu-toggle-text'>Menu</span> <i class="fa fa-bars"></i></a>
+				<a class="visible-xs beta-menu-toggle pull-right" href="#"><span class='beta-menu-toggle-text' style="color: black">Menu</span> <i class="fa fa-bars"></i></a>
 				<div class="visible-xs clearfix"></div>
 				<nav class="main-menu">
 					<ul class="l-inline ov">

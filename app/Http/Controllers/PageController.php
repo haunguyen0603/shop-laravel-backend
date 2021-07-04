@@ -158,7 +158,7 @@ class PageController extends Controller
     {
         $allProduct = Product::where('is_deleted', 0)->where('active', 1)->get();
         $slide = Slide::all();
-        $new_product = Product::where('new', 1)->paginate(4);
+        $new_product = Product::where('new', 1)->paginate(24);
         $sanpham_khuyenmai = Product::where('promotion_price', '<>', 0)->paginate(8);
         return view('page.trangchu', compact('slide', 'new_product', 'sanpham_khuyenmai', 'allProduct'));
     }

@@ -30,7 +30,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="beta-products-list">
-							<h4>Sản phẩm mới</h4>
+							<h2>Sản phẩm mới</h2>
 							<div class="beta-products-details">
 								<p class="pull-left">Tìm thấy {{count($new_product)}} sản phẩm</p>
 								<div class="clearfix"></div>
@@ -38,7 +38,7 @@
 
 							<div class="row">
 							@foreach($new_product as $new)
-								<div class="col-sm-3">
+								<div class="col-sm-3" style="padding-bottom: 15px">
 									<div class="single-item">
 									@if($new->promotion_price!=0)
 										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
@@ -50,10 +50,10 @@
 											<p class="single-item-title">{{$new->name}}</p>
 											<p class="single-item-price" style="font-size: 18px">
 											@if($new->promotion_price==0)
-												<span class="flash-sale">{{number_format($new->unit_price)}} đồng</span>
+												<span class="flash-sale">{{number_format($new->unit_price)}} VND</span>
 											@else
-												<span class="flash-del">{{number_format($new->unit_price)}} đồng</span>
-												<span class="flash-sale">{{number_format($new->promotion_price)}} đồng</span>
+												<span class="flash-del">{{number_format($new->unit_price)}} VND</span>
+												<span class="flash-sale">{{number_format($new->promotion_price)}} VND</span>
 											@endif
 											</p>
 										</div>
@@ -72,14 +72,14 @@
 						<div class="space50">&nbsp;</div>
 
 						<div class="beta-products-list">
-							<h4>Sản phẩm khuyến mãi</h4>
+							<h2>Sản phẩm khuyến mãi</h2>
 							<div class="beta-products-details">
 								<p class="pull-left">Tìm thấy {{count($sanpham_khuyenmai)}} sản phẩm</p>
 								<div class="clearfix"></div>
 							</div>
 							<div class="row">
 							@foreach($sanpham_khuyenmai as $spkm)
-								<div class="col-sm-3">
+								<div class="col-sm-3" style="padding-bottom: 15px">
 									<div class="single-item">
 										<div class="single-item-header">
 											<a href="{{route('chitietsanpham',$spkm->id)}}"><img src="source/image/product/{{$spkm->image}}" alt="" height="250px"></a>
@@ -87,8 +87,8 @@
 										<div class="single-item-body">
 											<p class="single-item-title">{{$spkm->name}}</p>
 											<p class="single-item-price"  style="font-size: 18px">
-												<span class="flash-del">{{number_format($spkm->unit_price)}} đồng</span>
-												<span class="flash-sale">{{number_format($spkm->promotion_price)}} đồng</span>
+												<span class="flash-del">{{number_format($spkm->unit_price)}} VND</span>
+												<span class="flash-sale">{{number_format($spkm->promotion_price)}} VND</span>
 											</p>
 										</div>
 										<div class="single-item-caption">

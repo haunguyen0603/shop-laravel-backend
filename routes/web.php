@@ -74,7 +74,7 @@ Route::get('dang-nhap',[
 ]);
 Route::post('dang-nhap',[
 	'as'=>'login',
-	'uses'=>'PageController@postLogin'
+	'uses'=>'Auth\LoginController@postLogin'
 ]);
 
 Route::get('dang-xuat',[

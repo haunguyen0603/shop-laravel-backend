@@ -34,7 +34,7 @@
 							<input type="email" name="email" required>
 						</div>
 						<div class="form-block">
-							<label for="phone">Password*</label>
+							<label for="password">Password*</label>
 							<input type="password" name="password" required>
 						</div>
 						<div class="form-block">

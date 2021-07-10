@@ -286,7 +286,7 @@ class PageController extends Controller
         $user->full_name = $req->fullname;
         $user->email = $req->email;
 
-        $user->password = $req->password;
+        $user->password = bcrypt($req->password);
         $user->phone = $req->phone;
         $user->address = $req->address;
         $user->save();

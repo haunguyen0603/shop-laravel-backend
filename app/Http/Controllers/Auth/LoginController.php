@@ -60,13 +60,11 @@ class LoginController extends Controller
             ]
         );
         // dd($req->email, $req->password);
-        // $credentials = array('email' => $req->email, 'password' => $req->password, 'active' => 1);
-        $user = $this->User->where('email', $req->email)
-                           ->where('password', $req->password)->first();
-        // dd($user->active);
+        $credentials = array('email' => $req->email, 'password' => $req->password, 'active' => 1);
+        $user = ['email' => $req->email, 'password' => $req->password];
         
-        if ($user) {
-            if ($user->active == 1) {
+        if (Auth::attempt($user)) {
+            if (Auth::attempt($credentials)) {
                 return redirect()->route('trang-chu')->with(['flag' => 'success', 'thongbao' => 'Đăng nhập thành công']);
             } else {
                 return redirect()->back()->with(['flag' => 'danger', 'message' => 'Đăng nhập không thành công']);

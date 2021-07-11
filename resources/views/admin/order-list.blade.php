@@ -27,7 +27,7 @@
                     {{--</div>--}}
                     <div class="panel-body">
                         <div class="table-responsive">
-                            <table class="table table-condensed">
+                            <table class="table table-condensed" id="table">
                                 <thead>
                                 <tr>
                                     <td><strong>Mã hóa đơn</strong></td>
@@ -43,7 +43,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($order as $key => $bill)
+                                {{-- @foreach($order as $key => $bill)
                                 <tr>
                                     <td>{{$bill->order_id}}</td>
                                     <td>{{$bill->date_order}}</td>
@@ -58,7 +58,7 @@
                                         <td><button type="submit" class="btn btn-danger btn-block" onclick="return confirm('Bạn muốn xóa không?')">Xóa</button></td>
                                     </form>
                                 </tr>
-                                @endforeach
+                                @endforeach --}}
                                 </tbody>
                             </table>
                         </div>
@@ -67,6 +67,12 @@
             </div>
         </div>
     </div>
-
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var grid = $('#table').DataTable({
+                url: {{route('order_list')}}
+            });
+            var_dump(grid)
+        });
+    </script>
 @endsection

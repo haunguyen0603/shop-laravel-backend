@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\BillDetail;
 use App\Bill;
+use Yajra\Datatables\Facades\Datatables;
 
 class OrderController extends Controller
 {
@@ -14,10 +15,13 @@ class OrderController extends Controller
     }
 
     public function index(){
-        $order = $this->bill->showBillList()->paginate(25);
-        // dd($order);
+        return view('admin.order-list');
+    }
 
-        return view('admin.order-list', compact('order'));
+    public function showOrderList(){
+        $order = $this->bill->showBillList();
+
+        dd(datatables()->collection($order)->toJson());
     }
 
     public function deleteBill($id){

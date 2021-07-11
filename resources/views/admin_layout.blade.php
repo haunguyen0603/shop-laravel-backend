@@ -24,6 +24,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link rel="stylesheet" href="{{asset('/backend/css/bootstrap-tagsinput.css')}}" type="text/css"/>
 <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" type="text/css"/>
 <link rel="icon" href="{{asset('/frontend/images/logo-mail.png')}}" type="image/gif" sizes="32x32">
+<!-- Datatables  -->
+<link href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
 <!-- calendar -->
 <!-- //calendar -->
 <!-- //font-awesome icons -->
@@ -257,6 +259,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="{{asset('/backend/js/jquery.form-validator.min.js')}}"></script>
+<!-- Datatables  -->
+<script type="text/javascript" src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script>
   var options = {
     filebrowserImageBrowseUrl: 'laravel-filemanager?type=Images',

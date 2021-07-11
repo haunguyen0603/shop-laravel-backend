@@ -70,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="{{route('logout')}}"><i class="fa fa-key"></i>Đăng xuất</a></li>
+                <li><a href="{{route('logout_admin')}}"><i class="fa fa-key"></i>Đăng xuất</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -85,13 +85,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- sidebar menu start-->
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-                {{-- <li>
-                    <a class="active" href="{{URL::to('/dashboard')}}">
+                <li>
+                    <a class="active" href="{{URL::to('/admin-dashboard')}}">
                         <i class="fa fa-dashboard"></i>
                         <span>Tổng quan</span>
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="{{URL::to('read_data')}}">
                         <i class="fa fa-dashboard"></i>
                         <span>Google drive</span>
@@ -122,9 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Đơn hàng</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{}}">Quản lý đơn hàng</a></li>
-						
-                      
+						<li><a href="{{route('order_list')}}">Quản lý đơn hàng</a></li>
                     </ul>
                 </li>
                  <li class="sub-menu">

@@ -128,11 +128,14 @@ Route::post('dang-ki',[
 	'as'=>'signin',
 	'uses'=>'PageController@postSignin'
 ]);
-// Login Admin Dashboard
-Route::get('/admin-dashboard', 'AdminController@index');
-Route::post('/admin-dashboard', 'AdminController@login');
-Route::get('logout', 'AdminController@Logout')->name('logout');
 
+Route::group(['middleware' => ['auth']], function ($route) {
+	// Login Admin Dashboard
+	Route::get('/admin-dashboard', 'AdminController@index')->name('login_admin');
+	Route::post('/admin-dashboard', 'AdminController@login');
+	Route::get('logout', 'AdminController@Logout')->name('logout_admin');
 
+	// Order List
+	Route::get('order-list', 'OrderController@index')->name('order_list');
 
-
+});

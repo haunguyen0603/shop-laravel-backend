@@ -52,12 +52,11 @@
                                     <td><strong>{{$bill->total}}</strong></td>
                                     <form action="{{route('bill.destroy',$bill->id)}}" method="post" class="beta-form-checkout">
                                         {{--<input type="hidden" name="_token" value="{{csrf_token()}}">--}}
-                                        {{ csrf_field() }}
-                                        {{ method_field('DELETE') }}
-                                        <td><button type="submit" class="btn btn-danger btn-block" onclick="return confirm('Bạn muốn xóa không?')">Xóa</button></td>
-                                    </form>
-                                </tr>
-                                @endforeach --}}
+                                        {{-- {{ method_field('DELETE') }} --}}
+                                        {{-- <td><button type="submit" class="btn btn-danger btn-block" onclick="return confirm('Bạn muốn xóa không?')">Xóa</button></td> --}}
+                                    {{-- </form>
+                                </tr> --}}
+                                {{-- @endforeach --}}
                                 </tbody>
                             </table>
                         </div>

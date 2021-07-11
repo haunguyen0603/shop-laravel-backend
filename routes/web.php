@@ -137,5 +137,6 @@ Route::group(['middleware' => ['auth']], function ($route) {
 
 	// Order List
 	Route::get('order-list', 'OrderController@index')->name('order_list');
+	Route::delete('order-list/{id}', 'OrderController@deleteBill')->name('delete_order');
 
 });

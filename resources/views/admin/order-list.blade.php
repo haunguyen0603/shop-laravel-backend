@@ -31,10 +31,11 @@
                                 <thead>
                                 <tr>
                                     <td><strong>Mã hóa đơn</strong></td>
-                                    <td><strong>Mã khách hàng</strong></td>
-                                    <td><strong>Hình thức thann toán</strong></td>
+                                    <td><strong>Ngày mua</strong></td>
+                                    <td><strong>Tên khách hàng</strong></td>
+                                    <td><strong>Hình thức thanh toán</strong></td>
                                     <td class=""><strong>Ghi chú</strong></td>
-                                    <td class=""><strong>Ngày mua</strong></td>
+                                    <td><strong>Số sản phẩm</strong></td>
                                     <td class=""><strong>Tổng tiền</strong></td>
                                     <td class=""><strong>Xóa hóa đơn</strong></td>
 
@@ -42,21 +43,22 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {{-- @foreach($bill as $bill)
+                                @foreach($order as $key => $bill)
                                 <tr>
-                                    <td><strong>{{$bill->id}}</strong></td>
-                                    <td><strong>{{$bill->id_customer}}</strong></td>
-                                    <td><strong>{{$bill->payment}}</strong></td>
-                                    <td><strong>{{$bill->note}}</strong></td>
-                                    <td><strong>{{$bill->date_order}}</strong></td>
-                                    <td><strong>{{$bill->total}}</strong></td>
-                                    <form action="{{route('bill.destroy',$bill->id)}}" method="post" class="beta-form-checkout">
-                                        {{--<input type="hidden" name="_token" value="{{csrf_token()}}">--}}
-                                        {{-- {{ method_field('DELETE') }} --}}
-                                        {{-- <td><button type="submit" class="btn btn-danger btn-block" onclick="return confirm('Bạn muốn xóa không?')">Xóa</button></td> --}}
-                                    {{-- </form>
-                                </tr> --}}
-                                {{-- @endforeach --}}
+                                    <td>{{$bill->order_id}}</td>
+                                    <td>{{$bill->date_order}}</td>
+                                    <td>{{$bill->name}}</td>
+                                    <td>{{$bill->payment}}</td>
+                                    <td>{{$bill->note}}</td>
+                                    <td>{{$bill->products}}</td>
+                                    <td>{{$bill->total}}</td>
+                                    <form action="{{route('delete_order',$bill->order_id)}}" method="post" class="beta-form-checkout">
+                                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                        {{ method_field('DELETE') }}
+                                        <td><button type="submit" class="btn btn-danger btn-block" onclick="return confirm('Bạn muốn xóa không?')">Xóa</button></td>
+                                    </form>
+                                </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -128,11 +128,10 @@ Route::post('dang-ki',[
 	'as'=>'signin',
 	'uses'=>'PageController@postSignin'
 ]);
-
-
-
-
-
+// Login Admin Dashboard
+Route::get('/admin-dashboard', 'AdminController@index');
+Route::post('/admin-dashboard', 'AdminController@login');
+Route::get('logout', 'AdminController@Logout')->name('logout');
 
 
 

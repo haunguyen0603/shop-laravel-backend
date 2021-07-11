@@ -9,11 +9,11 @@
             <div class="pull-left">
                 <h3 class="inner-title">Danh Sách Hóa Đơn</h3>
             </div>
-            <div class="pull-right">
+            {{-- <div class="pull-right">
                 <div class="beta-breadcrumb">
                 <h4><a href="{{route('page.admin')}}">Back to Admin</a></h4>
                 </div>
-            </div>
+            </div> --}}
             <div class="clearfix"></div>
         </div>
     </div>

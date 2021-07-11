@@ -23,4 +23,5 @@ class BillDetail extends Model
 
         return $model;
     }
+    
 }

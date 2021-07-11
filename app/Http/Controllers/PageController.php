@@ -21,8 +21,9 @@ use Hash;
 
 class PageController extends Controller
 {
-    public function __construct(User $User) {
+    public function __construct(User $User, BillDetail $BillDetail) {
         $this->User = $User;
+        $this->billDetail = $BillDetail;
     }
 
     public function updateProduct(Request $request, $id)
@@ -248,8 +249,8 @@ class PageController extends Controller
         $Bill = $bill->BillInfo($id)->first();
         // dd($Bill->payment);
         // $bill_detail = BillDetail::where('id', $id)->first();
-        $bill_detail = new BillDetail;
-        $BillDetail = $bill_detail->BillDetail($id)->get();
+        // $bill_detail = new BillDetail;
+        $BillDetail = $this->billDetail->BillDetail($id)->get();
 
         return view('page.thongtindonhang', compact('BillDetail', 'Bill'));
     }

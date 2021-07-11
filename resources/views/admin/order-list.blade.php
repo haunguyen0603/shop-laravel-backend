@@ -22,9 +22,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    {{--<div class="panel-heading">--}}
-                        {{--<h3 class="panel-title"><strong>Chi tiết hóa đơn</strong></h3>--}}
-                    {{--</div>--}}
+                    <div>
+                        {{-- <form action="{{route('show_order')}}" method="get">
+                            <button type="submit">Show data</button>
+                        </form> --}}
+                    </div>
                     <div class="panel-body">
                         <div class="table-responsive">
                             <table class="table table-condensed" id="table">
@@ -37,9 +39,7 @@
                                     <td class=""><strong>Ghi chú</strong></td>
                                     <td><strong>Số sản phẩm</strong></td>
                                     <td class=""><strong>Tổng tiền</strong></td>
-                                    <td class=""><strong>Xóa hóa đơn</strong></td>
-
-
+                                    <td class=""><strong>Action</strong></td>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -69,10 +69,22 @@
     </div>
     <script type="text/javascript">
         $(document).ready(function () {
-            var grid = $('#table').DataTable({
-                url: {{route('order_list')}}
+            $('#table').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: '{!! route('show_order') !!}',
+                columns: [
+                    { data: 'order_id', name: 'order_id' },
+                    { data: 'date_order', name: 'date_order' },
+                    { data: 'name', name: 'name' },
+                    { data: 'payment', name: 'payment' },
+                    { data: 'note', name: 'note' },
+                    { data: 'products', name: 'products' },
+                    { data: 'total', name: 'total' },
+
+                ]
             });
-            var_dump(grid)
+            // var_dump(grid)
         });
     </script>
 @endsection

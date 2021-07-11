@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\BillDetail;
 use App\Bill;
-use Yajra\Datatables\Facades\Datatables;
+use Yajra\Datatables\Datatables;
 
 class OrderController extends Controller
 {
@@ -19,9 +19,13 @@ class OrderController extends Controller
     }
 
     public function showOrderList(){
-        $order = $this->bill->showBillList();
+        $order = $this->bill->showBillList()->get();
 
-        dd(datatables()->collection($order)->toJson());
+        return Datatables::of($order)->addColumn('action', function ($bill) {
+            return '<a href="'.route('delete_order', $bill->order_id).'" class="btn btn-xs btn-warning"><i class="fa fa-eye"></i> View</a> <a href="'.route('delete_order', $bill->order_id).'" class="btn btn-xs btn-danger btn-delete"><i class="fa fa-times"></i> Delete</a>';
+        })
+        ->rawColumns(['action'])
+        ->make(true);
     }
 
     public function deleteBill($id){

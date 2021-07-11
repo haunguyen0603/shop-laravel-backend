@@ -138,8 +138,8 @@ Route::group(['middleware' => ['auth']], function ($route) {
 	Route::get('/admin-dashboard/dashboard', 'AdminController@Dashboard')->name('dashboard');
 
 	// Order List
-	Route::get('/admin-dashboard/order-list', 'OrderController@index');
-	Route::post('/admin-dashboard/order-list', 'OrderController@showOrderList')->name('order_list');
+	Route::get('/admin-dashboard/order-list', 'OrderController@index')->name('order_list');
+	Route::get('/admin-dashboard/show-order-list', 'OrderController@showOrderList')->name('show_order');
 	Route::delete('/admin-dashboard/order-list/{id}', 'OrderController@deleteBill')->name('delete_order');
 
 });

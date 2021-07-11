@@ -59,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="{{('/backend/images/2.png')}}">
+                <img alt="" src="{{asset('/backend/images/2.png')}}">
                 <span class="username">
                 	@if (Auth::check())
                         <b>Xin chào {{Auth::user()->full_name}}</b>
@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="{{URL::to('/admin-dashboard')}}">
+                    <a class="active" href="{{route('dashboard')}}">
                         <i class="fa fa-dashboard"></i>
                         <span>Tổng quan</span>
                     </a>
@@ -125,7 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="{{route('order_list')}}">Quản lý đơn hàng</a></li>
                     </ul>
                 </li>
-                 <li class="sub-menu">
+                 {{-- <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>Mã giảm giá</span>
@@ -146,19 +146,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         
                       
                     </ul>
-                </li>
+                </li> --}}
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>Danh mục sản phẩm</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/add-category-product')}}">Thêm danh mục sản phẩm</a></li>
-						<li><a href="{{URL::to('/all-category-product')}}">Liệt kê danh mục sản phẩm</a></li>
+						<li><a href="">Thêm danh mục sản phẩm</a></li>
+						<li><a href="">Liệt kê danh mục sản phẩm</a></li>
                       
                     </ul>
                 </li>
-                <li class="sub-menu">
+                {{-- <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>Bình luận</span>
@@ -166,8 +166,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
                         <li><a href="{{URL::to('/comment')}}">Liệt kê bình luận</a></li>
                     </ul>
-                </li>
-                <li class="sub-menu">
+                </li> --}}
+                {{-- <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>Danh mục bài viết</span>
@@ -177,15 +177,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{URL::to('/all-category-post')}}">Liệt kê danh mục bài viết</a></li>
                       
                     </ul>
-                </li>
+                </li> --}}
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>Thương hiệu sản phẩm</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/add-brand-product')}}">Thêm hiệu sản phẩm</a></li>
-						<li><a href="{{URL::to('/all-brand-product')}}">Liệt kê thương hiệu sản phẩm</a></li>
+						<li><a href="">Thêm hiệu sản phẩm</a></li>
+						<li><a href="">Liệt kê thương hiệu sản phẩm</a></li>
                       
                     </ul>
                 </li>
@@ -196,12 +196,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Sản phẩm</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/add-product')}}">Thêm sản phẩm</a></li>
-						<li><a href="{{URL::to('/all-product')}}">Liệt kê sản phẩm</a></li>
+						<li><a href="">Thêm sản phẩm</a></li>
+						<li><a href="">Liệt kê sản phẩm</a></li>
                       
                     </ul>
                 </li>
-                 <li class="sub-menu">
+                 {{-- <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>Bài viết</span>
@@ -211,42 +211,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{URL::to('/all-post')}}">Liệt kê bài viết</a></li>
                       
                     </ul>
-                </li>
-                 <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-book"></i>
-                        <span>Video</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="{{URL::to('video')}}">Thêm video</a></li>
-                    
-                      
-                    </ul>
-                </li>
-                @impersonate
-                <li>
-                   
-                    <span><a href="{{URL::to('/impersonate-destroy')}}">Stop chuyển quyền</a></span>
-                  
-                </li>
-                @endimpersonate
-
-                @hasrole(['admin','author'])
+                </li> --}}
+                {{-- @hasrole(['admin','author'])
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>Users</span>
                     </a>
                     <ul class="sub">
-                         <li><a href="{{URL::to('/add-users')}}">Thêm user</a></li>
-                        <li><a href="{{URL::to('/users')}}">Liệt kê user</a></li>
+                         <li><a href="">Thêm user</a></li>
+                        <li><a href="">Liệt kê user</a></li>
                       
                     </ul>
                 </li>
-
-                @endhasrole
+                @endhasrole --}}
              
-            </ul>            </div>
+            </ul>            
+        </div>
         <!-- sidebar menu end-->
     </div>
 </aside>
@@ -256,13 +237,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<section class="wrapper">
         @yield('admin_content')
     </section>
- <!-- footer -->
-		  <div class="footer">
-			<div class="wthree-copyright">
-			  <p>Các bạn xem hướng dẫn tạo project  : <a target="_blank" href="https://www.youtube.com/watch?v=CjA79XhHVQI&list=PLWTu87GngvNxpWN6FVuEcS-YvFNq6RnqG">tại đây nhé</a></p>
-			</div>
-		  </div>
-  <!-- / footer -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="wthree-copyright">
+            
+        </div>
+    </div>
+    <!-- / footer -->
 </section>
 <!--main content end-->
 </section>
@@ -271,21 +252,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{asset('/backend/js/scripts.js')}}"></script>
 <script src="{{asset('/backend/js/jquery.slimscroll.js')}}"></script>
 <script src="{{asset('/backend/js/jquery.nicescroll.js')}}"></script>
-
-
 <script src="{{asset('/backend/ckeditor/ckeditor.js')}}"></script>
-
 <script src="{{asset('/backend/js/simple.money.format.js')}}"></script>
-
-
-
-
 <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-
- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="{{asset('/backend/js/jquery.form-validator.min.js')}}"></script>
-
 <script>
   var options = {
     filebrowserImageBrowseUrl: 'laravel-filemanager?type=Images',

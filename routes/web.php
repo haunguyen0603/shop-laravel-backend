@@ -129,14 +129,16 @@ Route::post('dang-ki',[
 	'uses'=>'PageController@postSignin'
 ]);
 
+// Login Admin Dashboard
+Route::get('/admin-dashboard', 'AdminController@index');
+Route::post('/login', 'AdminController@login')->name('login_admin');
+Route::get('/logout', 'AdminController@Logout')->name('logout_admin');
+
 Route::group(['middleware' => ['auth']], function ($route) {
-	// Login Admin Dashboard
-	Route::get('/admin-dashboard', 'AdminController@index')->name('login_admin');
-	Route::post('/admin-dashboard', 'AdminController@login');
-	Route::get('logout', 'AdminController@Logout')->name('logout_admin');
+	Route::get('/admin-dashboard/dashboard', 'AdminController@Dashboard')->name('dashboard');
 
 	// Order List
-	Route::get('order-list', 'OrderController@index')->name('order_list');
-	Route::delete('order-list/{id}', 'OrderController@deleteBill')->name('delete_order');
+	Route::get('/admin-dashboard/order-list', 'OrderController@index')->name('order_list');
+	Route::delete('/admin-dashboard/order-list/{id}', 'OrderController@deleteBill')->name('delete_order');
 
 });

@@ -21,7 +21,7 @@ class AdminController extends Controller
         // dd($data = $request->all());
 
         if(Auth::attempt(['email'=>$request->admin_email,'password'=>$request->admin_password, 'active'=> 1, 'admin'=> 1], $remember)){
-            return view('admin.dashboard');
+            return redirect()->route('dashboard');
         }else{
             return redirect()->back()->with('message','Lỗi đăng nhập authentication');
         }
@@ -31,6 +31,10 @@ class AdminController extends Controller
     public function Logout(){
         Auth::logout();
         return view('admin_login');
+    }
+
+    public function Dashboard(){
+        return view('admin.dashboard');
     }
     
     public function validation($request){

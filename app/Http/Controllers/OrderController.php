@@ -25,6 +25,6 @@ class OrderController extends Controller
         $bill->is_deleted = 1;
         $bill->save();
 
-        return view('admin.order-list');
+        return redirect()->back();
     }
 }

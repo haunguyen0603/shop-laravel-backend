@@ -51,7 +51,7 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><strong>Chi tiết hóa đơn</strong></h3>
+                        <h3><strong>Chi tiết hóa đơn</strong></h3>
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">

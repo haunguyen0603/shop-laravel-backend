@@ -71,7 +71,7 @@
             $('#table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: '{!! route('show_order') !!}',
+                ajax: '{{route('show_order')}}',
                 columns: [
                     { data: 'order_id', name: 'order_id' },
                     { data: 'date_order', name: 'date_order' },

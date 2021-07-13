@@ -143,4 +143,11 @@ Route::group(['middleware' => ['auth']], function ($route) {
 	Route::get('/admin-dashboard/order-list/{id}', 'OrderController@deleteBill')->name('delete_order');
 	Route::get('/admin-dashboard/order-detail/{id}', 'OrderController@showOrderDetail')->name('order_detail');
 
+	// Product Type
+	Route::get('/admin-dashboard/product-type-list', 'ProductTypeController@index')->name('type_list');
+	Route::get('/admin-dashboard/show-product-type-list', 'ProductTypeController@showProductType')->name('show_product_type');
+	Route::get('/admin-dashboard/add-product-type', 'ProductTypeController@addProductType')->name('add_type');
+	Route::post('/admin-dashboard/add-type', 'ProductTypeController@AddNew')->name('add_new_type');
+	Route::get('/admin-dashboard/edit-type/{id}', 'ProductTypeController@EditType')->name('edit_type');
+
 });

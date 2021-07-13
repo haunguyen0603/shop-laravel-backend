@@ -22,7 +22,7 @@ class OrderController extends Controller
         $order = $this->bill->showBillList()->get();
         if($request->ajax()){
             return Datatables::of($order)->addColumn('action', function ($bill) {
-                return '<a href="'.route('order_detail', $bill->order_id).'" class="btn btn-xs btn-success"><i class="fa fa-eye"></i> View</a> 
+                return '<a href="'.route('order_detail', $bill->order_id).'" onclick="return confirm("Bạn muốn xóa không?")" class="btn btn-xs btn-success"><i class="fa fa-eye"></i> View</a> 
                         <a href="'.route('delete_order', $bill->order_id).'" class="btn btn-xs btn-danger btn-delete"><i class="fa fa-times"></i> Delete</a>';
             })
             ->rawColumns(['action'])

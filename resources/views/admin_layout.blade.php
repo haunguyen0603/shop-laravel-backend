@@ -99,15 +99,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <i class="fa fa-dashboard"></i>
                         <span>Google drive</span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
-                    <a href="{{URL::to('/information')}}">
+                    <a href="">
                         <i class="fa fa-dashboard"></i>
                         <span>Thông tin website</span>
                     </a>
                 </li>
                  
-                <li class="sub-menu">
+                {{-- <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>Slider</span>
@@ -116,9 +116,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{URL::to('/manage-slider')}}">Liệt kê slider</a></li>
                         <li><a href="{{URL::to('/add-slider')}}">Thêm slider</a></li>
                     </ul>
-                </li>
-                   
                 </li> --}}
+                   
+                </li>
                  <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
@@ -153,11 +153,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
-                        <span>Danh mục sản phẩm</span>
+                        <span>Loại sản phẩm</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{route('add_type')}}">Thêm danh mục sản phẩm</a></li>
-						<li><a href="{{route('type_list')}}">Liệt kê danh mục sản phẩm</a></li>
+						<li><a href="{{route('add_type')}}">Thêm loại sản phẩm</a></li>
+						<li><a href="{{route('type_list')}}">Danh sách loại sản phẩm</a></li>
                       
                     </ul>
                 </li>
@@ -187,8 +187,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Thương hiệu sản phẩm</span>
                     </a>
                     <ul class="sub">
-						<li><a href="">Thêm hiệu sản phẩm</a></li>
-						<li><a href="">Liệt kê thương hiệu sản phẩm</a></li>
+						<li><a href="">Thêm thương hiệu</a></li>
+						<li><a href="">Danh sách thương hiệu</a></li>
                       
                     </ul>
                 </li>
@@ -199,36 +199,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Sản phẩm</span>
                     </a>
                     <ul class="sub">
-						<li><a href="">Thêm sản phẩm</a></li>
-						<li><a href="">Liệt kê sản phẩm</a></li>
+						<li><a href="{{route('add_product')}}">Thêm sản phẩm</a></li>
+						<li><a href="{{route('product_list')}}">Danh sách sản phẩm</a></li>
                       
                     </ul>
-                </li>
-                 {{-- <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-book"></i>
-                        <span>Bài viết</span>
-                    </a>
-                    <ul class="sub">
-                         <li><a href="{{URL::to('/add-post')}}">Thêm bài viết</a></li>
-                        <li><a href="{{URL::to('/all-post')}}">Liệt kê bài viết</a></li>
-                      
-                    </ul>
-                </li> --}}
-                {{-- @hasrole(['admin','author'])
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-book"></i>
-                        <span>Users</span>
-                    </a>
-                    <ul class="sub">
-                         <li><a href="">Thêm user</a></li>
-                        <li><a href="">Liệt kê user</a></li>
-                      
-                    </ul>
-                </li>
-                @endhasrole --}}
-             
+                </li> 
             </ul>            
         </div>
         <!-- sidebar menu end-->

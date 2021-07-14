@@ -150,4 +150,9 @@ Route::group(['middleware' => ['auth']], function ($route) {
 	Route::post('/admin-dashboard/add-type', 'ProductTypeController@AddNew')->name('add_new_type');
 	Route::get('/admin-dashboard/edit-type/{id}', 'ProductTypeController@EditType')->name('edit_type');
 
+	// Product
+	Route::get('/product-list', 'ProductController@index')->name('product_list');
+	Route::get('/show-product-list', 'ProductController@showProductList')->name('show_product_list');
+	route::get('/add-product', 'ProductController@addProduct')->name('add_product');
+
 });

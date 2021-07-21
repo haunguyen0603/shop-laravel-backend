@@ -19,6 +19,11 @@ Route::get('cap-nhat-san-pham/{id}','PageController@updateProduct')->name('page.
 Route::get('sua-san-pham/{id}','PageController@editProduct')->name('page.suasanpham');
 Route::get('danh-sach-san-pham','PageController@getAllProduct')->name('page.danhsachsanpham');
 
+// Test API
+Route::get('show-product-api', 'PageController@showProduct');
+Route::get('show-banner-api', 'PageController@showBannerApi');
+Route::get('show-product-type-api', 'PageController@showProductType');
+
 Route::get('index',[
 	'as'=>'trang-chu',
 	'uses'=>'PageController@getIndex'

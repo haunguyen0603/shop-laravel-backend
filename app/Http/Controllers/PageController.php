@@ -13,6 +13,7 @@ use App\BillDetail;
 use App\User;
 use App\Http;
 use App\ContactForm;
+use App\Banner;
 
 use Image;
 use Illuminate\Http\Request;
@@ -21,9 +22,10 @@ use Hash;
 
 class PageController extends Controller
 {
-    public function __construct(User $User, BillDetail $BillDetail) {
+    public function __construct(User $User, BillDetail $BillDetail, Product $product) {
         $this->User = $User;
         $this->billDetail = $BillDetail;
+        $this->product = $product;
     }
 
     public function updateProduct(Request $request, $id)
@@ -393,5 +395,24 @@ class PageController extends Controller
 
         $admin->save();
         return redirect()->back()->with('thanhcong', 'Tạo tài khoản thành công');
+    }
+
+    public function showProduct () {
+        $model = $this->product->showProduct()->paginate(8)->toArray();
+        // dd($model);
+
+        return json_encode($model['data']);
+    }
+
+    public function showBannerApi () {
+        $model = Banner::where('active', 1)->get();
+
+        return json_encode($model);
+    }
+
+    public function showProductType () {
+        $model = ProductType::all();
+
+        return json_encode($model);
     }
 }

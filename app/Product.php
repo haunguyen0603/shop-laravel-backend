@@ -19,8 +19,10 @@ class Product extends Model
     public function showProduct (){
         $model = $this  ->join('type_products as a', 'a.id', '=', 'products.id_type')
                         ->where('products.is_deleted', 0)
-                        ->select('products.*', 'a.name as type_name');
+                        ->select('products.*', 'a.name as type_name')
+                        ->orderBy('products.id');
 
         return $model;
     }
 }
+ 

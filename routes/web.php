@@ -19,11 +19,6 @@ Route::get('cap-nhat-san-pham/{id}','PageController@updateProduct')->name('page.
 Route::get('sua-san-pham/{id}','PageController@editProduct')->name('page.suasanpham');
 Route::get('danh-sach-san-pham','PageController@getAllProduct')->name('page.danhsachsanpham');
 
-// Test API
-Route::get('show-product-api', 'PageController@showProduct');
-Route::get('show-banner-api', 'PageController@showBannerApi');
-Route::get('show-product-type-api', 'PageController@showProductType');
-
 Route::get('index',[
 	'as'=>'trang-chu',
 	'uses'=>'PageController@getIndex'
@@ -161,3 +156,9 @@ Route::group(['middleware' => ['auth']], function ($route) {
 	route::get('/add-product', 'ProductController@addProduct')->name('add_product');
 
 });
+
+// Test API
+Route::get('show-product-api', 'PageController@showProduct');
+Route::get('show-banner-api', 'PageController@showBannerApi');
+Route::get('show-product-type-api', 'PageController@showProductType');
+Route::get('show-discount-product-api', 'PageController@showDiscountProduct');

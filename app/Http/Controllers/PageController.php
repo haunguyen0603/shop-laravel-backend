@@ -415,4 +415,10 @@ class PageController extends Controller
 
         return json_encode($model);
     }
+
+    public function showDiscountProduct () {
+        $spDiscount = Product::where('promotion_price', '<>', 0)->paginate(8)->toArray();
+
+        return json_encode($spDiscount['data']);
+    }
 }
